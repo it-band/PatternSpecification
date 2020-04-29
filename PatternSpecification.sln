@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30011.22
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{41E7C2C6-0123-4B7C-BF61-752EF58329F0}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{358D3416-4FA3-4666-BA13-63808044F9DF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ITB.Specification", "src\ITB.Specification\ITB.Specification.csproj", "{5150D151-A59D-4455-ACC1-65F27FFD7C42}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5150D151-A59D-4455-ACC1-65F27FFD7C42}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5150D151-A59D-4455-ACC1-65F27FFD7C42}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5150D151-A59D-4455-ACC1-65F27FFD7C42}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5150D151-A59D-4455-ACC1-65F27FFD7C42}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{5150D151-A59D-4455-ACC1-65F27FFD7C42} = {358D3416-4FA3-4666-BA13-63808044F9DF}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E85057B1-09E9-43E9-BEE8-2A85089924D8}
+	EndGlobalSection
+EndGlobal
