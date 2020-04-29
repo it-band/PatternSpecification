@@ -3,6 +3,10 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Version>1.0.1</Version>
+    <Authors>IT Band System</Authors>
+    <Company>IT Band System</Company>
+    <Description>Implementation of Pattern Specification for .NET CORE</Description>
   </PropertyGroup>
 
   <ItemGroup>
