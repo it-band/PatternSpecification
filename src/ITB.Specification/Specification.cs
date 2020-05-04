@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq.Expressions;
 
 namespace ITB.Specification
@@ -50,5 +51,33 @@ namespace ITB.Specification
 
         public static Specification<T> operator !(Specification<T> spec)
             => spec.Not();
+
+
+        private readonly List<Expression<Func<T, object>>> _includes = new List<Expression<Func<T, object>>>();
+        private readonly List<string> _includeStrings = new List<string>();
+
+        public IReadOnlyList<Expression<Func<T, object>>> Includes => _includes;
+        public IReadOnlyList<string> IncludeStrings => _includeStrings;
+
+        public virtual void AddInclude(IEnumerable<Expression<Func<T, object>>> includeExpressions)
+        {
+            _includes.AddRange(includeExpressions);
+        }
+
+        public virtual void AddInclude(Expression<Func<T, object>> includeExpression)
+        {
+            _includes.Add(includeExpression);
+        }
+
+        public virtual void AddInclude(IEnumerable<string> includeStrings)
+        {
+            _includeStrings.AddRange(includeStrings);
+        }
+
+        // string-based includes allow for including children of children
+        public virtual void AddInclude(string includeString)
+        {
+            _includeStrings.Add(includeString);
+        }
     }
 }
