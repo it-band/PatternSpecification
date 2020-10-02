@@ -43,6 +43,13 @@ namespace ITB.Specification
             return new NotSpecification<T>(this);
         }
 
+        public static implicit operator Expression<Func<T, bool>>(Specification<T> spec) => spec.Predicate;
+
+        public static implicit operator Func<T, bool>(Specification<T> spec) => spec.IsSatisfiedBy;
+
+        public static bool operator false(Specification<T> spec) => false;
+        public static bool operator true(Specification<T> spec) => false;
+
         public static Specification<T> operator &(Specification<T> spec1, Specification<T> spec2)
             => spec1.And(spec2);
 
